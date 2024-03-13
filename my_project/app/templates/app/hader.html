@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: space-around;
+      height: 50px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #495057;
+      margin-left: 40px;
+      margin-top:12px;
+      font-weight: bold;
+    }
+
+    .search-container {
+      display: flex;
+      margin-top: 6px;
+    }
+
+    .search-input {
+      border: 1px solid #ced4da;
+      border-radius: 10px;
+      margin-right: 10px;
+      width: 260px;
+      height: 40px;
+    }
+
+    .search-button {
+      
+      background-color: #007bff;
+      color: #fff;
+      border: 1px solid black;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 5px 0px 5px 0px;
+      width: 80px;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        margin-top: 10px;
+      }
+
+      .search-input {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
+  <title>Cycle</title>
+</head>
+<body>
+<nav>
+  <div style="display: flex;">
+  <a href="{% url 'home'%}" style="font-size: 16px;">Home</a>
+  <a href="{% url 'about'%}"style="font-size: 16px;">About</a>
+  <a href="{% url 'contact'%}"style="font-size: 16px;">Contact</a>
+  <a href="{% url 'register'%}"style="font-size: 16px;">Sign Up</a>
+  {% if data%}
+  <a href="{% url 'login'%}"style="font-size: 16px;">Logout</a>
+  {% else %}
+  <a href="{% url 'login'%}"style="font-size: 16px;">Login</a>
+  {% endif %}
+  </div>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search" style="font-size: 18px;">
+
+    <button class="search-button"style="font-size: 18px;">Search</button>
+    <h6 style="margin-left: 10px;margin-top: 10px;">{{data | default:'Welcome to Gust'}}</h6>
+  </div>
+  </nav>
+
+<!-- Your content goes here -->
+
+</body>
+</html>

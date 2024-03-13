@@ -1,0 +1,228 @@
+ {% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+      /* background-color: rgba(255, 255, 255, 0.7); Adjust the background color and opacity as needed */
+    
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .image-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0px; /* Adjust the margin value as per your requirement */
+      padding: 10px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .AC1{
+      width: 100%;
+      height: auto;
+      display: flex;
+      
+    }
+    .AI2{
+      background-image: url("{% static 'image/manB.jpg' %}");
+      width: 50%;
+      height:500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    .AI3{
+      background-image: url("{% static 'image/womanC.jpg' %}");
+      width: 50%;
+      height:500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+.on-img{
+  background-color: transparent; /* Background color ko transparent set karein */
+    color: #ffffff; /* Font color ko desired color mein set karein */
+    border: 1px solid white; /* Border ko remove karein, agar koi hai toh */
+    width: 150px;
+    height: 50px;
+    margin-left: 40%;
+    /* margin-top: 30%; */
+  /* text-align: center; */
+  /* align-items: center; */
+  transition: all 0.6s;
+}
+    .k1{
+      /* margin-left: 35%; */
+      text-align: center;
+      color: #ffffff;
+      margin-top: 25%;
+    }
+    .k2{
+      font-size: 25px;
+      color: #ffffff;
+     text-align: center;
+    
+    }
+    .on-img:hover{
+      background-color:black;
+      /* transform: scale(0.9); */
+    }
+    .AI5{
+      background-image: url("{% static 'image/AbFo.jpg' %}");
+      width: 100%;
+      height:700px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;     
+      
+    }
+    .Go{
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin-top: 40px;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+    .G1{
+      transition: all 0.7s;
+      /* border: 1px solid black; */
+    }
+    .sa{
+      margin-top: 20px;
+    }
+    .pra{
+      width: 300px;
+      font-size: 16px;
+      font-weight: bolder;
+      margin-left: 12%;
+      margin-top: 20px;
+    }
+  #body {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  height: 50vh;
+
+  margin-left: 30%;
+  /* background-color: #f0f0f0; */
+}
+
+.animated-text {
+  overflow: hidden;
+}
+
+.text {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  width: 300px;
+  margin-left: 30px;
+  animation: scaleText 2s infinite alternate;
+}
+
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+    color: #3498db;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #e74c3c;
+  }
+  100% {
+    transform: scale(1);
+    color: #3498db;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="AC4">
+    <div class="AI5">
+      <div id="body">
+      <div class="animated-text">
+        <span class="text"><h2>Hello Consumer</h2></span>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="Go">
+      <div class="G1">
+<img src="{% static 'image/Saddles1.jpg'%}" alt="">
+<h4 class="sa">Saddles</h4>
+<p class="pra">These seats are confortable, made with soft materials and can be adjusted as you want.</p>
+      </div>
+      <div class="G1">
+        <img src="{% static 'image/Handlebars2.jpg'%}" alt="">
+        <h4 class="sa">Handlebars</h4>
+        <p class="pra">These handles are stable weither you ride it on mountains or do offroding with this.</p>
+      </div >
+      <div class="G1">
+        <img src="{% static 'image/Tires&Wheels3.jpg'%}" alt="">
+        <h4 class="sa">Tires & Wheels</h4>
+        <p class="pra">The tires are tubeless, it can resist in havey weight & the strings of wheels are made of stainless steels.</p>
+      </div>
+    </div>
+   
+    <div class="Go" style="margin-bottom:50px ;">
+      <div class="G1">
+<img src="{% static 'image/Pedals4.jpg'%}" alt="">
+<h4 class="sa">Padals</h4>
+<p class="pra">These padals work softly, you will get a tite grip on it. </p>
+      </div>
+      <div class="G1">
+        <img src="{% static 'image/Frames5.jpg'%}" alt="">
+        <h4 class="sa">Frames</h4>
+        <p class="pra">The frames are stylish and there build quality is extremly stong & it will help you to balance the Cycle.</p>
+      </div >
+      <div class="G1">
+        <img src="{% static 'image/Helmete6.jpg'%}" alt="">
+        <h4 class="sa">Helmets</h4>
+        <p class="pra">These Helmets can protect your head from big rocks also & it is having a strips to tie titely  your head.</p>
+      </div>
+    </div>
+    <div class="AC1">
+      <div class="AI2">
+       <h1 class="k1">Road Cycle</h1>
+       <p class="k2">Powerful and easy to use</p>
+       <button class="on-img">Shop Now</button>
+      </div>
+      <div class="AI3">
+        <h1 class="k1">Woman's Cycle</h1>
+        <p class="k2">Helping to inspir women in sport</p>
+        <button class="on-img">Shop Now</button>
+      </div>
+    </div>
+    
+<div class="image-container"style="margin-top :50px;margin-bottom:50px">
+   <img src="{% static 'image/H1.png' %}" alt="Image 1">
+  <img src="{% static 'image/H2.png' %}" alt="Image 2">
+  <img src="{% static 'image/H3.png' %}" alt="Image 3">
+  <img src="{% static 'image/H4.jpg' %}" alt="Image 4">
+  <img src="{% static 'image/Herob.png' %}" alt="Image 5">
+  <!-- <img src="{% static 'image/th7.jfif' %}" alt="Image 6">
+  <img src="{% static 'image/th8.jfif' %}" alt="Image 7">
+  <img src="{% static 'image/th9.jfif' %}" alt="Image 8"> -->
+  <!-- Add more images as needed -->
+</div>
+
+</body>
+</html>
+
+{% endblock %} 

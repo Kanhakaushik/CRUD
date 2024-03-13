@@ -1,0 +1,154 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <style>
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-item{
+    padding:10px 5px;
+    width: 240px;
+    height:330px ;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 30px;
+    border-radius: 0.5em;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow:-1px -1px 42px #5e9900bf;
+    -moz-box-shadow:-1px -1px 42px #5e9900bf;
+    box-shadow:-1px -1px 42px #5e9900bf;
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 2px;
+    transition: all 5s;
+}
+
+.bt{
+    
+    width: 100px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.bt:hover{
+    background-color: rgb(6, 108, 175);
+}
+.img:hover{
+  transform: scale(1.1);
+}
+#carouselExampleCaption{
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'image/Buy&ride.jpg' %}" class="d-block w-100" alt="..." style="height: 700px;">
+        <div class="carousel-caption d-none d-md-block" >
+       <h1>Buy & Ride</h1>
+        <p>Meeting the need of each cyclist</p>
+        <h1></h1>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/About_s1W.jpg' %}" class="d-block w-100" alt="..." style="height: 700px;">
+        <div class="carousel-caption d-none d-md-block" >
+           
+          <h1>Elegant and Functional</h1>  
+          <p>A wide variety of women's bikes from top brands</p>      
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/free.jpg' %}" class="d-block w-100" alt="..." style="height: 700px;">
+        <div class="carousel-caption d-none d-md-block">
+        <h1>Free Delivery</h1>
+          <p>Plus a parfect combination of price & qulity</p>
+       </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- LANDING PAGE STARTS -->
+    <div class="card-main">
+
+        <!-- card container start -->
+
+        <div class="card-container">
+
+            <!-- first card -->
+            <div class="card-item">
+                <img src="{% static 'image/Def.png' %}" alt="" class="img">
+                <h5>THORN</h5>
+                <p>Rs. 8,860</p>
+                <button class="bt">BUY NOW</button>
+                </div>
+
+            <!-- second card -->
+            <div class="card-item">
+                <img src="{% static 'image/deg2.png' %}" alt="" class="img">
+                <h5>VOLTAGE</h5>
+                <p>Rs. 10,075</p>
+                <button class="bt">BUY NOW</button>
+                 </div>
+            <!-- third card -->
+
+            <div class="card-item">
+                <img src="{% static 'image/fatBoy.jfif' %}" alt="" class="img">
+                <h5>Fat Boy 6T</h5>
+                <P>Rs. 18,540</P>
+                <button class="bt">BUY NOW</button>
+                </div>
+
+            <!-- fourth card -->
+            <div class="card-item">
+                <img src="{% static 'image/fyxationC.jpg' %}" alt="" class="img">
+                <h5>Classical 4L</h5>
+                <P>Rs. 6,040</P>
+                <button class="bt">BUY NOW</button>
+               </div>
+
+            <!-- fifth card -->
+             <div class="card-item">
+                <img src="{% static 'image/F6i.png' %}" alt="" class="img">
+                <h5>F6i</h5>
+                <p>Rs. 12,205</p>
+                <button class="bt">Buy Now</button>    
+            </div> 
+            <div class="card-item">
+              <img src="{% static 'image/Dabul.jfif' %}" alt="" class="img">
+              <h5>Strombreaker</h5>
+              <p>Rs. 14,099</p>
+              <button class="bt">Buy Now</button>    
+          </div> 
+        </div>
+    </div>
+    <!-- LANDING PAGE ENDS -->
+
+    </body>
+  </html>
+{% endblock %}

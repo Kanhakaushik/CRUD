@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<center>
+  <form action="{% url 'search' var=user.email %}" method="post">
+    {% csrf_token %}
+    <input type="search" name="search" >
+    <input type="submit"name="button">
+  </form>
+<table align="center" width="700px" style="border: 2px solid black;">
+    <thead style="background-color: #E4FFEE; border: 2px solid black;">
+        <tr style="background-color: #E4FFEE; border: 2 px solid black;">
+            <!-- <th>OrderId</th> -->
+            <th>Id</th>
+          <th>Email</th>
+          <th>Query</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      
+      <tbody style="background-color: #E4FFEE; border: 2 px solid black;">
+          {% for i in key1 %}
+          <tr align="center">
+            <!-- <td>{{i.OrderId}}</td> -->
+            <td>{{i.id}}</td>
+              <td>{{i.Email}}</td>
+                <td>{{i.Query}}</td>
+                <th><a href="{% url 'edit' pk=i.id %}">Edit</a></th>
+                 <td><a href="{% url 'delete' pk=i.id %}">Delete</a></td>
+             
+              </td>
+
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+  </center>
+  {% endblock%}
